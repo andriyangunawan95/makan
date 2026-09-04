@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoodBox - Pesan Makanan</title>
+  <link rel="stylesheet" href="makanan.css">
+</head>
+
+<body>
+
+<header>
+  <div class="logo">🍔 FoodBox</div>
+
+  <nav>
+    <a href="https://andriyangunawan95.github.io/RrentalPS/rentalps.html" class="ring-link" target="_blank">🎮ＰＬＡＹＳＴＡＴＩＯＮ🎮 </a>
+    <a href="https://andriyangunawan95.github.io/Bioskop/bioskopmini.html" class="ring-link" target="_blank">📥 [PLAYING NOW] 📺 Bioskop Mini 🍿 </a>
+    <button onclick="showPage('about')">Tentang Kami</button>
+    <button onclick="showPage('help')">Bantuan</button>
+
+    <select id="language" onchange="changeLanguage()"
+      <option value="id">🇮🇩 Indonesia</option>*
+      <option value="en">🇬🇧 English</option>
+    </select>
+
+    <button onclick="resetOrder()">Reset</button>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1 id="heroTitle">Lapar saat main PS atau nonton?</h1>
+  <p id="heroText">
+    Pesan makanan favoritmu dengan mudah dan cepat.
+  </p>
+</section>
+
+<div class="promo">
+  🔥 PROMO HARI INI! Pesan makanan sekarang dan nikmati waktu bermainmu! 🔥
+</div>
+
+<main>
+
+  <!-- BERANDA -->
+  <section id="home" class="page active">
+
+    <h2>🍽️ Menu Makanan</h2>
+    <p class="subtitle">Pilih makanan yang kamu inginkan.</p>
+
+    <div id="products" class="products"></div>
+
+    <div class="cart">
+
+      <h2>🛒 Keranjang</h2>
+
+      <div id="cartItems">
+        Keranjang masih kosong.
+      </div>
+
+      <div class="total">
+        <span>Total</span>
+        <strong id="total">Rp0</strong>
+      </div>
+
+      <h2>📋 Data Pemesan</h2>
+
+      <form id="orderForm">
+
+        <input
+          type="text"
+          id="name"
+          placeholder="Nama lengkap"
+          required
+        >
+
+        <input
+          type="number"
+          id="age"
+          placeholder="Umur"
+          min="1"
+          required
+        >
+
+        <input
+          type="tel"
+          id="phone"
+          placeholder="Nomor WhatsApp"
+          required
+        >
+
+        <textarea
+          id="address"
+          placeholder="Alamat lengkap"
+          required
+        ></textarea>
+
+        <select id="place" required>
+          <option value="">Pilih tempat</option>
+          <option value="Rental PS">Rental PS</option>
+          <option value="Bioskop Mini">Bioskop Mini</option>
+        </select>
+
+        <input
+          type="text"
+          id="location"
+          placeholder="Nomor meja / studio"
+          required
+        >
+
+        <textarea
+          id="note"
+          placeholder="Catatan tambahan (opsional)"
+        ></textarea>
+
+        <button class="order-btn" type="submit">
+          📲 Pesan via WhatsApp
+        </button>
+
+      </form>
+
+    </div>
+
+  </section>
+
+  <!-- TENTANG -->
+  <section id="about" class="page">
+
+    <div class="box">
+
+      <h2>🏪 Tentang FoodBox</h2>
+
+      <p>
+        FoodBox adalah layanan pemesanan makanan yang cocok
+        untuk menemani kamu bermain PS atau menonton.
+      </p>
+
+      <p>
+        Pilih makanan, masukkan data pemesan, lalu pesanan
+        akan dikirim langsung melalui WhatsApp penjual.
+      </p>
+
+      <h3>✨ Fitur</h3>
+
+      <ul>
+        <li>50 pilihan makanan</li>
+        <li>Tombol tambah dan kurang</li>
+        <li>Keranjang belanja</li>
+        <li>Pesan melalui WhatsApp</li>
+        <li>Bahasa Indonesia dan English</li>
+        <li>Desain responsive</li>
+      </ul>
+
+    </div>
+
+  </section>
+
+  <!-- BANTUAN -->
+  <section id="help" class="page">
+
+    <div class="box">
+
+      <h2>🆘 Pusat Bantuan</h2>
+
+      <p>
+        Jika mengalami masalah saat melakukan pemesanan,
+        silakan hubungi admin.
+      </p>
+
+      <p>
+        📞 Admin: <strong>085782329752</strong>
+      </p>
+
+      <a
+        class="whatsapp"
+        href="https://wa.me/6285782329752"
+        target="_blank"
+      >
+        💬 Chat Admin
+      </a>
+
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 FoodBox. Semua Hak Dilindungi.</p>
+</footer>
+
+<script src="makanan.js"></script>
+
+</body>
+</html>
